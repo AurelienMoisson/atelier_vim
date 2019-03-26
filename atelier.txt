@@ -43,10 +43,10 @@ remarque utile :
 
 exercice :
 
-2. ceci est une ligne mal placée
 0. ceci est une ligne à supprimer
-1. ceci est une ligne qui devrait être en première position
-3. ceci est une ligne qui devrait être dédoublée
+1. ceci est une ligne qui devrait être dédoublée
+3. ceci est une ligne mal placée
+2. ceci est une ligne qui devrait être en première position
 
 
 
@@ -91,10 +91,12 @@ selection :
         v          -> mode de sélection normal
         V          -> mode de sélection par ligne
         ctrl-v  -> mode de sélection par bloc
+	
+	en mode selection, en appuyant sur un verbe, la commande s'executera directement sur la sélection sans attendre de nom.
 
 
 indentation :
     >> et << permettent de changer d'un cran l'indentation de la ligne
     3>> agira sur la ligne du curseur et les 2 du dessous
-    V3>> sélectionne la ligne sous le curseur puis l'indente 3 fois
+    V3> sélectionne la ligne sous le curseur puis l'indente 3 fois
 
