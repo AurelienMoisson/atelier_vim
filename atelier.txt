@@ -22,6 +22,7 @@ comment écrire dans un fichier :
 	Il y a plein de façon de le faire, si vous ne voulez en retenir qu'une : appuyer sur i
 	Je vous invite à vous placer au milieu d'une ligne et essayer les commandes suivantes :
 	i a I A o O
+	(en appuyant sur <esc> pour retourner en mode normal entre chaque commande)
 
 Grammaire des commandes :
 	la plupart des commandes de vim sont sous la forme <verbe><nom>
@@ -32,8 +33,13 @@ Grammaire des commandes :
 Verbes pour les modifications usuelles :
 	y pour copier,
 	d pour supprimer et copier (equivalent au ctrl-x sur d'autres editeurs),
+	c pour supprimer et rentrer dans le mode insertion
 
 pour coller ce que vous avez copié, utiliser la commande p (ou P)
+
+remarque utile :
+	pour annuler une modification : u
+	pour refaire une modification annulée : ctrl-r
 
 exercice :
 
@@ -43,4 +49,39 @@ exercice :
 3. ceci est une ligne qui devrait être dédoublée
 
 
+
+noms utiles :
+	commandes de déplacement :
+	(utilisées seules, elles déplaceront votre curseur)
+	(utilisées après un verbe, elles décriront où s'applique le verbe)
+	w (pour word)
+	$ (pour fin de la ligne)
+	0 (pour début de la ligne)
+	_ (pour premier caractère non blanc de la ligne)
+	fc (ou f suivi de n'importe quel caractère pour aller sur la prochaine occurence de ce caractère sur la ligne)
+	tc (comme f mais s'arrète juste avant le caractère)
+	
+	noms de contexte (utilisant des préfixes) :
+	iw
+	i'  i"  i]  i}  i)  i<
+
+	vous pouvez changer les i en a pour changer le comportement (je vous laisse découvrir)
+
+
+exercice :
+	supprimez un des mots mots dupliqués
+	fonction(argument_un, "ceci est le second argument")# essayez de changer la chaine de caractères
+	une_fonction(avec_plusieurs_arguments, "une chaine de caractère")# changez la chaine de caractères en 'c'
+	(plein, (de, (parenthèses, (les, (unes, (dans, (les, (autres))))))))
+
+
+effectuer plusieurs fois une même commande :
+	rajoutez un nombre (non nul) avant le verbe ou le nom de la commande
+
+exemples :
+	6yy copiera 6 lignes
+	y6y fera la même chose
+	6dw supprimera 6 mots (et les copieras)
+
+	c2i) pour changer (uoe(snth . oue) eiu) ce qui est dans les parenthèses extérieures quand le curseur est sur le point 
 
