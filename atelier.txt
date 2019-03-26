@@ -1,0 +1,46 @@
+les principaux modes :
+	normal
+	insert
+	visual
+
+Vous pouvez retourner au mode normal en appuyant sur <esc>
+Vous pouvez voir dans quel mode vous êtes en regardant en bas à gauche de votre terminal (sauf en mode normal)
+
+comment quitter :
+	quand vous êtes dans le mode normal tappez la commande :
+		:q
+	si vous avez effectué des modifications, vous avez le choix entre :
+		:q!  			pour ignorer les modifications et quitter
+		:wq  			pour enregistrer les modifications et quitter
+		:wq file_name   pour enregistrer dans un fichier spécifique et quitter
+	(vous pouvez aussi utiliser :w seul pour enregistrer sans quitter)
+	(évitez d'enregistrer les modifications dans ce fichier si vous voulez pouvoir réessayer)
+
+
+comment écrire dans un fichier :
+	Pour écrire, il faut passer en mode insert.
+	Il y a plein de façon de le faire, si vous ne voulez en retenir qu'une : appuyer sur i
+	Je vous invite à vous placer au milieu d'une ligne et essayer les commandes suivantes :
+	i a I A o O
+
+Grammaire des commandes :
+	la plupart des commandes de vim sont sous la forme <verbe><nom>
+	où <verbe> est la commande à effectuer
+	et <nom> est l'objet sur lequel effectuer la commande
+	dans le cas où la commande est à appliquer sur la ligne entière, il faut répeter le verbe deux fois (ex: dd ou yy ou cc)
+
+Verbes pour les modifications usuelles :
+	y pour copier,
+	d pour supprimer et copier (equivalent au ctrl-x sur d'autres editeurs),
+
+pour coller ce que vous avez copié, utiliser la commande p (ou P)
+
+exercice :
+
+2. ceci est une ligne mal placée
+0. ceci est une ligne à supprimer
+1. ceci est une ligne qui devrait être en première position
+3. ceci est une ligne qui devrait être dédoublée
+
+
+
