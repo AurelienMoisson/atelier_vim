@@ -1,45 +1,45 @@
 les principaux modes :
-	normal
-	insert
-	visual
+    normal
+    insert
+    visual
 
 Vous pouvez retourner au mode normal en appuyant sur <esc>
 Vous pouvez voir dans quel mode vous êtes en regardant en bas à gauche de votre terminal (sauf en mode normal)
 
 comment quitter :
-	quand vous êtes dans le mode normal tappez la commande :
-		:q
-	si vous avez effectué des modifications, vous avez le choix entre :
-		:q!  			pour ignorer les modifications et quitter
-		:wq  			pour enregistrer les modifications et quitter
-		:wq file_name   pour enregistrer dans un fichier spécifique et quitter
-	(vous pouvez aussi utiliser :w seul pour enregistrer sans quitter)
-	(évitez d'enregistrer les modifications dans ce fichier si vous voulez pouvoir réessayer)
+    quand vous êtes dans le mode normal tappez la commande :
+        :q
+    si vous avez effectué des modifications, vous avez le choix entre :
+        :q!              pour ignorer les modifications et quitter
+        :wq              pour enregistrer les modifications et quitter
+        :wq file_name   pour enregistrer dans un fichier spécifique et quitter
+    (vous pouvez aussi utiliser :w seul pour enregistrer sans quitter)
+    (évitez d'enregistrer les modifications dans ce fichier si vous voulez pouvoir réessayer)
 
 
 comment écrire dans un fichier :
-	Pour écrire, il faut passer en mode insert.
-	Il y a plein de façon de le faire, si vous ne voulez en retenir qu'une : appuyer sur i
-	Je vous invite à vous placer au milieu d'une ligne et essayer les commandes suivantes :
-	i a I A o O
-	(en appuyant sur <esc> pour retourner en mode normal entre chaque commande)
+    Pour écrire, il faut passer en mode insert.
+    Il y a plein de façon de le faire, si vous ne voulez en retenir qu'une : appuyer sur i
+    Je vous invite à vous placer au milieu d'une ligne et essayer les commandes suivantes :
+    i a I A o O
+    (en appuyant sur <esc> pour retourner en mode normal entre chaque commande)
 
 Grammaire des commandes :
-	la plupart des commandes de vim sont sous la forme <verbe><nom>
-	où <verbe> est la commande à effectuer
-	et <nom> est l'objet sur lequel effectuer la commande
-	dans le cas où la commande est à appliquer sur la ligne entière, il faut répeter le verbe deux fois (ex: dd ou yy ou cc)
+    la plupart des commandes de vim sont sous la forme <verbe><nom>
+    où <verbe> est la commande à effectuer
+    et <nom> est l'objet sur lequel effectuer la commande
+    dans le cas où la commande est à appliquer sur la ligne entière, il faut répeter le verbe deux fois (ex: dd ou yy ou cc)
 
 Verbes pour les modifications usuelles :
-	y pour copier,
-	d pour supprimer et copier (equivalent au ctrl-x sur d'autres editeurs),
-	c pour supprimer et rentrer dans le mode insertion
+    y pour copier,
+    d pour supprimer et copier (equivalent au ctrl-x sur d'autres editeurs),
+    c pour supprimer et rentrer dans le mode insertion
 
 pour coller ce que vous avez copié, utiliser la commande p (ou P)
 
 remarque utile :
-	pour annuler une modification : u
-	pour refaire une modification annulée : ctrl-r
+    pour annuler une modification : u
+    pour refaire une modification annulée : ctrl-r
 
 exercice :
 
@@ -51,37 +51,50 @@ exercice :
 
 
 noms utiles :
-	commandes de déplacement :
-	(utilisées seules, elles déplaceront votre curseur)
-	(utilisées après un verbe, elles décriront où s'applique le verbe)
-	w (pour word)
-	$ (pour fin de la ligne)
-	0 (pour début de la ligne)
-	_ (pour premier caractère non blanc de la ligne)
-	fc (ou f suivi de n'importe quel caractère pour aller sur la prochaine occurence de ce caractère sur la ligne)
-	tc (comme f mais s'arrète juste avant le caractère)
-	
-	noms de contexte (utilisant des préfixes) :
-	iw
-	i'  i"  i]  i}  i)  i<
+    commandes de déplacement :
+    (utilisées seules, elles déplaceront votre curseur)
+    (utilisées après un verbe, elles décriront où s'applique le verbe)
+    w (pour word)
+    $ (pour fin de la ligne)
+    0 (pour début de la ligne)
+    _ (pour premier caractère non blanc de la ligne)
+    fc (ou f suivi de n'importe quel caractère pour aller sur la prochaine occurence de ce caractère sur la ligne)
+    tc (comme f mais s'arrète juste avant le caractère)
+    
+    noms de contexte (utilisant des préfixes) :
+    iw
+    i'  i"  i]  i}  i)  i<
 
-	vous pouvez changer les i en a pour changer le comportement (je vous laisse découvrir)
+    vous pouvez changer les i en a pour changer le comportement (je vous laisse découvrir)
 
 
 exercice :
-	supprimez un des mots mots dupliqués
-	fonction(argument_un, "ceci est le second argument")# essayez de changer la chaine de caractères
-	une_fonction(avec_plusieurs_arguments, "une chaine de caractère")# changez la chaine de caractères en 'c'
-	(plein, (de, (parenthèses, (les, (unes, (dans, (les, (autres))))))))
+    supprimez un des mots mots dupliqués
+    fonction(argument_un, "ceci est le second argument")# essayez de changer la chaine de caractères
+    une_fonction(avec_plusieurs_arguments, "une chaine de caractère")# changez la chaine de caractères en 'c'
+    (plein, (de, (parenthèses, (les, (unes, (dans, (les, (autres))))))))
 
 
 effectuer plusieurs fois une même commande :
-	rajoutez un nombre (non nul) avant le verbe ou le nom de la commande
+    rajoutez un nombre (non nul) avant le verbe ou le nom de la commande
 
 exemples :
-	6yy copiera 6 lignes
-	y6y fera la même chose
-	6dw supprimera 6 mots (et les copieras)
+    6yy copiera 6 lignes
+    y6y fera la même chose
+    6dw supprimera 6 mots (et les copieras)
 
-	c2i) pour changer (uoe(snth . oue) eiu) ce qui est dans les parenthèses extérieures quand le curseur est sur le point 
+    c2i) pour changer par exemple ce qui est dans les parenthèses extérieures quand le curseur est sur le point ci-dessous 
+        (uoe(snth . oue) eiu) 
+
+selection :
+    il y a 3 modes de séléction :
+        v          -> mode de sélection normal
+        V          -> mode de sélection par ligne
+        ctrl-v  -> mode de sélection par bloc
+
+
+indentation :
+    >> et << permettent de changer d'un cran l'indentation de la ligne
+    3>> agira sur la ligne du curseur et les 2 du dessous
+    V3>> sélectionne la ligne sous le curseur puis l'indente 3 fois
 
