@@ -1,0 +1,19 @@
+undo/redo :
+	u
+	ctrl-r
+
+verbes :
+	edition :
+		d
+		y
+		c
+	indentation :
+		>
+		<
+
+noms :
+	w 	fin du mot
+	iw
+	aw
+	i[ i( i{ i" i' i< (idem avec a à la place de i et avec les crochets fermants au lieu de ceux ouvrants)
+    doubler le verbe pour agir sur la ligne
